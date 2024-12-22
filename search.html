@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>OSINT Earth | Search</title>
+
+        <meta content="#7869d2" name="theme-color">
+        <meta property="og:site_name" content="OSINT Earth" /> 
+        <meta property="og:site" content="OSINT Earth" /> 
+        <meta property="og:title" content="OSINT Earth"/> 
+        <meta property="og:description" content="OSINT Earth is your comprehensive directory to access public record lookup resources from around the world, soon to be the largest repository of its kind." /> 
+        <meta property="og:image" content="images/osint earth.png" />
+        <meta property="og:url" content="https://osint.earth" /> 
+        <meta property="og:type" content="article" />
+
+        <link rel="icon" href="img/favicon.png" type="image/x-icon">
+
+        <link rel="stylesheet" href="search.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
+    </head>
+    <body>
+        <div class="wrapper">
+            <nav class="navbar">
+                <div class="brand-title"><a href="index.html">OSINT <span class="Earth">Earth</span></a></div>
+                <a href="#" class="toggle-button">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </a>
+                <div class="navbar-links">
+                    <ul>
+                        <li><a href="https://osint.earth">Home</a></li>
+                        <li><a href="https://osint.earth/search">Search</a></li>
+                        <li><a href="https://osint.earth/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="container-table">
+                <div class="section-header">
+                    <h1 class="typing-effect">DATA<span class="Earth-h1">TABLE</span></h1>
+                    <p>Explore global public record lookups easily with OSINT Earth's Datatable. Use our data table to find sources matching your research needs.</p>
+                </div>
+                <div class="container-table-text">
+                    <hr>
+                    <h1 class="section-box-header">Usage</h1>
+                    <div class="section-container">
+                        <div class="section">
+                            <h2>How To</h2>
+                            <p>Use filters like country, record type and payment to access and manage public records efficiently. The data table displays relevant records based on your selections, enabling easy exploration of details without the need for a search bar.</p>
+                        </div>
+                        <div class="section">
+                            <h2>Disclaimer</h2>
+                            <p>OSINT Earth links to external public record resources for information. We don't control or endorse them. Users are responsible for their use, and we encourage ethical, legal, and responsible use of data.</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <h1 class="section-box-header">Settings</h1>
+                    <div class="section-container">
+                        <div class="section">
+                            <h2>Statistics</h2>
+                            <div class="statistic">
+                                <p>Latest Country:</p>
+                                <p>AUSTRALIA</p>
+                            </div>
+                            <div class="statistic">
+                                <p>Total Countries:</p>
+                                <p>15</p>
+                            </div>
+                            <div class="statistic">
+                                <p>Total Links:</p>
+                                <p>105</p>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="filter-group">
+                                <h2>Filters</h2>
+                                <label for="country-filter">Country:</label>
+                                <select id="country-filter">
+                                    <option value="">All</option>
+                                    <option value="Australia">Australia</option>
+                                    <option value="Belgium">Belgium</option>
+                                    <option value="Canada">Canada</option>
+                                    <option value="Denmark">Denmark</option>
+                                    <option value="Finland">Finland</option>
+                                    <option value="France">France</option>
+                                    <option value="Germany">Germany</option>
+                                    <option value="Iceland">Iceland</option>
+                                    <option value="Italy">Italy</option>
+                                    <option value="Netherlands">Netherlands</option>
+                                    <option value="New Zealand">New Zealand</option>
+                                    <option value="Norway">Norway</option>
+                                    <option value="Poland">Poland</option>
+                                    <option value="Singapore">Singapore</option>
+                                    <option value="Spain">Spain</option>
+                                    <option value="Sweden">Sweden</option>
+                                    <option value="Switzerland">Switzerland</option>
+                                    <option value="United Kingdom">United Kingdom</option>
+                                    <option value="United States">United States</option>
+                                </select>
+                    
+                                <label for="record-type-filter">Record Type:</label>
+                                <select id="record-type-filter">
+                                    <option value="">All</option>
+                                    <option value="Individual">Individual</option>
+                                    <option value="Company">Company</option>
+                                </select>
+                    
+                                <div class="payment-filter-display">
+                                    <label for="payment-filter">Payment:</label>
+                                    <select id="payment-filter">
+                                        <option value="">All</option>
+                                        <option value="Free">Free</option>
+                                        <option value="Freemium">Freemium</option>
+                                        <option value="Premium">Premium</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="datatable">
+                    <div class="data-table">
+                        <table id="customTable">
+                            <thead>
+                                <tr>
+                                    <th>NAME</th>
+                                    <th>LINK</th>
+                                    <th>COUNTRY</th>
+                                    <th>RECORD TYPE</th>
+                                    <th>PAYMENT</th>
+                                    <th>QUALITY</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                        <div class="pagination">
+                            <button class="custom-button-left" id="prevPage">&lt</button>
+                            <span class="button-span" id="currentPage">Page 1</span>
+                            <button class="custom-button-right" id="nextPage">&gt;</button>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <footer>
+                <div class="footer-content">
+                    <h2><a href="index.html">OSINT <span class="Earth">Earth</span></a></h2>
+                    <p>Copyright © 2023 OSINT Earth. All Rights Reserved.</p>
+                    <div class="contact-icons">
+                        <a href="https://t.me/osint_earth" target="_blank">
+                            <img src="img/telegram.svg" alt="tele">
+                        </a>
+                        <a href="https://twitter.com/osintearth" target="_blank">
+                            <img src="img/twitter.svg" alt="twit">
+                        </a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <img src="img/favicon.png" alt="Sticky Image" class="sticky-img">
+    </body>
+    <script>
+        const toggleButton = document.getElementsByClassName('toggle-button')[0]
+        const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+        toggleButton.addEventListener('click', () => {
+            navbarLinks.classList.toggle('active')
+        })
+
+        let data = []; 
+
+        let currentPage = 1; 
+        let recordsPerPage = 20;
+        let filteredData = [];
+
+        const tableBody = document.querySelector('#customTable tbody');
+
+        async function fetchData() {
+        try {
+            const response = await fetch('data.json');
+            if (!response.ok) {
+            throw new Error('Network response was not ok');
+            }
+            data = await response.json();
+            populateTable();
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+        }
+
+        fetchData();
+
+        function shouldFetchPaymentAndQuality() {
+        return window.innerWidth >= 1000;
+        }
+
+        function calculateRecordsPerPage() {
+
+        return shouldFetchPaymentAndQuality() ? 20 : 15;
+        }
+
+        function populateTable() {
+        tableBody.innerHTML = '';
+        const countryFilter = document.querySelector('#country-filter').value;
+        const recordTypeFilter = document.querySelector('#record-type-filter').value;
+        const paymentFilter = document.querySelector('#payment-filter').value;
+
+        filteredData = data.filter((item) =>
+            (countryFilter === '' || item.country === countryFilter) &&
+            (recordTypeFilter === '' || item.recordType === recordTypeFilter) &&
+            (paymentFilter === '' || item.payment === paymentFilter)
+        );
+
+        recordsPerPage = calculateRecordsPerPage(); 
+
+        const startIndex = (currentPage - 1) * recordsPerPage;
+        const endIndex = startIndex + recordsPerPage;
+
+        const pageData = filteredData.slice(startIndex, endIndex);
+
+        if (pageData.length === 0) {
+            const noResultsRow = document.createElement('tr');
+            noResultsRow.innerHTML = '<td colspan="6">No results found.</td>';
+            tableBody.appendChild(noResultsRow);
+
+            document.querySelector('#prevPage').disabled = true;
+            document.querySelector('#nextPage').disabled = true;
+
+            return;
+        }
+
+        pageData.forEach((item) => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+            <td>${item.name}</td>
+            <td>${item.link}</td>
+            <td>${item.country}</td>
+            <td>${item.recordType}</td>
+            ${shouldFetchPaymentAndQuality() ? `<td>${item.payment}</td><td>${item.quality}</td>` : ''}
+            `;
+            tableBody.appendChild(row);
+        });
+
+        const maxPage = Math.ceil(filteredData.length / recordsPerPage);
+
+        if (currentPage > maxPage) {
+            currentPage = maxPage;
+        }
+
+        document.querySelector('#prevPage').disabled = currentPage === 1;
+        document.querySelector('#nextPage').disabled = currentPage === maxPage;
+
+        document.querySelector('#currentPage').textContent = `Page ${currentPage}`;
+        }
+
+        document.querySelector('#prevPage').addEventListener('click', () => {
+        if (currentPage > 1) {
+            currentPage--;
+            populateTable();
+        }
+        });
+
+        document.querySelector('#nextPage').addEventListener('click', () => {
+        const maxPage = Math.ceil(filteredData.length / recordsPerPage);
+        if (currentPage < maxPage) {
+            currentPage++;
+            populateTable();
+        }
+        });
+
+        document.querySelector('#country-filter').addEventListener('change', populateTable);
+        document.querySelector('#record-type-filter').addEventListener('change', populateTable);
+        document.querySelector('#payment-filter').addEventListener('change', populateTable);
+
+        window.addEventListener('resize', populateTable);
+    </script>
+</html>
